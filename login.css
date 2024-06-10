@@ -1,0 +1,168 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    text-decoration: none;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.img-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url(assets/travis.jpg);
+    background-size: cover;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+}
+
+.form-container {
+    width: 400px;
+}
+
+.heading {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.heading h1 {
+    font-size: clamp(2rem, 1.375rem + 2vw, 2.rem);
+    margin-left: 15px;
+}
+
+.heading h1 span {
+    color: #000000;
+}
+
+.heading::before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background: #79AFFF;
+    border-radius: 100px;
+    left: 0;
+}
+
+.heading::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #000000;
+    bottom: -20px;
+    left: 0;
+    border-radius: 2.5rem;
+}
+
+.field {
+    display: grid;
+    gap: 1.2rem;
+}
+
+.input {
+    position: relative;
+}
+
+.input input {
+    font-size: 16px;
+    font-weight: 500;
+    width: 100%;
+    background: #ffffff;
+    border-radius: 5px;
+    padding: 25px 15px 10px;
+    transition: 0.2s ease;
+}
+
+.input input:focus ~ label {
+    color: #4a9cff;
+}
+
+.input label {
+    font-weight: 500;
+    position: absolute;
+    left: 15px;
+    top: 17.5px;
+    color: #808080;
+    transition: 0.2s ease;
+}
+
+.input #forgot-pass {
+    float: right;
+    color: #000000;
+    font-size: 0.9rem;
+    margin: 3px 0 7px;
+}
+
+.input #forgot-pass:hover {
+    text-decoration: underline;
+}
+
+.input.focus label {
+    font-size: 0.8rem;
+    top: 5px;
+}
+
+.btn button {
+    font-size: 16px;
+    font-weight: 500;
+    width: 100%;
+    background: #79AFFF;
+    padding: 15px;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.4s;
+}
+
+.btn button:hover {
+    background-color: #4a9cff;
+}
+
+@media only screen and (max-width: 1024px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .img-container {
+        height: 100px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    img {
+        width: 75px;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    .form-container {
+        width: 100%;
+        padding: 20px 50px;
+    }
+
+    .heading h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .form-container {
+        width: 100%;
+        padding: 20px;
+    }
+}
